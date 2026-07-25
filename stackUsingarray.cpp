@@ -12,7 +12,9 @@ public:
         capacity = size;
         top = -1;
     }
-    
+    ~Stack {
+        delete[] arr;
+    }        
     void push(int val) {
         if(top == capacity - 1) {
             cout << "Over flow\n";
