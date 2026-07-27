@@ -27,15 +27,17 @@ void front(int val) {
 //Insert a node at the end.
 void back(int val) {
     struct Node* newNode = creatNode(val);
-    struct Node* temp = head;
 
-    while(temp->next != NULL) {
-        temp = temp->next;
+    if (head == NULL) {          
+        head = newNode;
+        return;
     }
 
+    struct Node* temp = head;
+    while (temp->next != NULL) {
+        temp = temp->next;
+    }
     temp->next = newNode;
-    newNode->next = NULL;
-    
 }
 
 // Insert a node after a given value.
