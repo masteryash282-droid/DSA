@@ -114,7 +114,7 @@ void display() {
         temp = temp->next;
     } while(temp != head); 
     
-    cout << "NULL";
+    cout << "head";
     return;
 }
 int main()
